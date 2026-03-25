@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — 木花日和</title>
+    <meta name="description" content="木花日和のメニュー。homemadeの料理とお菓子、ナチュラルワイン。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 48px 40px;
+            background: linear-gradient(180deg, #e8e4da 0%, #ddd8cc 100%);
+            margin-top: 64px;
+        }
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--color-text);
+        }
+        .page-hero p {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            color: var(--color-text-light);
+            margin-top: 8px;
+        }
+        .menu-section {
+            padding: 80px 40px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .menu-note {
+            background: #f5f2ec;
+            border-left: 3px solid var(--color-accent-light);
+            padding: 20px 24px;
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 2;
+            margin-bottom: 64px;
+            border-radius: 0 4px 4px 0;
+        }
+        .menu-block {
+            margin-bottom: 72px;
+        }
+        .menu-block-title {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            color: var(--color-text);
+            margin-bottom: 8px;
+        }
+        .menu-block-sub {
+            font-size: 12px;
+            color: var(--color-text-light);
+            letter-spacing: 0.15em;
+            margin-bottom: 32px;
+        }
+        .menu-items {
+            border-top: 1px solid var(--color-border);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+            gap: 16px;
+        }
+        .menu-item-name {
+            font-size: 15px;
+            color: var(--color-text);
+            letter-spacing: 0.05em;
+            flex: 1;
+        }
+        .menu-item-desc {
+            font-size: 12px;
+            color: var(--color-text-light);
+            margin-top: 4px;
+            line-height: 1.6;
+        }
+        .menu-item-price {
+            font-family: var(--font-serif);
+            font-size: 15px;
+            color: var(--color-accent);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .menu-tag {
+            display: inline-block;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent-light);
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .menu-instagram {
+            text-align: center;
+            padding: 64px 40px;
+            background: #f5f2ec;
+        }
+        .menu-instagram p {
+            font-size: 14px;
+            color: var(--color-text-light);
+            line-height: 2;
+            margin-bottom: 24px;
+        }
+        .menu-instagram a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-light);
+            padding-bottom: 2px;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">木花日和</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="access.html">Access</a></li>
+            <li><a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-hero">
+        <h1>Menu</h1>
+        <p>季節のメニューはインスタグラムでご確認ください</p>
+    </div>
+
+    <div class="menu-section">
+
+        <div class="menu-note">
+            メニューは季節・日によって変わります。<br>
+            当日のメニューは <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank" style="color: var(--color-accent);">インスタグラム（@conohanabiyori_eifuku）</a> でご確認ください。<br>
+            ランチは当日10:30よりお電話にて予約受付しております。
+        </div>
+
+        <!-- ランチ -->
+        <div class="menu-block">
+            <h2 class="menu-block-title">Lunch</h2>
+            <p class="menu-block-sub">12:00 — 14:30（木・金・土）</p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">ランチプレート</p>
+                        <p class="menu-item-desc">季節の食材を使ったメインとサラダ、スープのセット<br>ドリンク・デザート付き</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">スパイスチキンカレー</p>
+                        <p class="menu-item-desc">ルヴァンのパンと共に。ドリンク・デザート付き</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">黒パンプレート</p>
+                        <p class="menu-item-desc">発酵食品の黒パンと季節のスープ。ドリンク付き</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ティータイム・お菓子 -->
+        <div class="menu-block">
+            <h2 class="menu-block-title">Sweets & Drinks</h2>
+            <p class="menu-block-sub">15:30 — 18:30（木・金・土）／ 12:00 — 18:30（日）</p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">空とぶプリン <span class="menu-tag">人気</span></p>
+                        <p class="menu-item-desc">固めの焼きプリン。季節のクリームと共に。数量限定</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">季節のタルト</p>
+                        <p class="menu-item-desc">スペルト小麦を使ったタルト。素材は季節により変わります</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">ライ麦スコーン</p>
+                        <p class="menu-item-desc">クリームサンドで。季節のフルーツと共に</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">チーズケーキ</p>
+                        <p class="menu-item-desc">ビーツマーブルなど、季節のアレンジで</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">コーヒー</p>
+                        <p class="menu-item-desc">鎌倉・ディモンシュの豆を使用</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">ハーブティー / 紅茶</p>
+                        <p class="menu-item-desc">季節のブレンド</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <p class="menu-item-name">ナチュラルワイン <span class="menu-tag">夜営業時</span></p>
+                        <p class="menu-item-desc">グラス・ボトルでご用意。詳細はインスタグラムへ</p>
+                    </div>
+                    <p class="menu-item-price">時価</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="menu-instagram">
+        <p>
+            メニューや価格は日々変わります。<br>
+            最新情報はインスタグラムをご覧ください。
+        </p>
+        <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">
+            @conohanabiyori_eifuku →
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2024 木花日和 コノハナビヨリ — 東京都杉並区永福町</p>
+    </footer>
+
+</body>
+</html>
