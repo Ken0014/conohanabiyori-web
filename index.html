@@ -7,6 +7,18 @@
     <meta name="description" content="築90年の古民家一角にある小さな喫茶。大きな桜の木と草花の茂る庭が目印です。東京・永福町。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <!-- OGP設定 -->
+    <meta property="og:title" content="木花日和 - 永福町の古民家喫茶">
+    <meta property="og:description" content="築90年の古民家一角にある小さな喫茶。大きな桜の木と草花の茂る庭が目印。東京・永福町。homemadecake&food naturalwine">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/">
+    <meta property="og:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
+    <meta property="og:site_name" content="木花日和">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="木花日和 - 永福町の古民家喫茶">
+    <meta name="twitter:description" content="築90年の古民家一角にある小さな喫茶。大きな桜の木と草花の茂る庭が目印。東京・永福町。">
+    <meta name="twitter:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +26,12 @@
     <!-- ナビゲーション -->
     <nav>
         <a href="index.html" class="nav-logo">木花日和</a>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="access.html">Access</a></li>
