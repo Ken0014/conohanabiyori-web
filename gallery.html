@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — 木花日和</title>
+    <meta name="description" content="木花日和のギャラリー。季節のお菓子、料理、古民家の空間をご覧ください。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <!-- OGP設定 -->
+    <meta property="og:title" content="Gallery — 木花日和">
+    <meta property="og:description" content="木花日和のギャラリー。季節のお菓子、料理、古民家の空間をご覧ください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/gallery.html">
+    <meta property="og:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
+    <meta property="og:site_name" content="木花日和">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 48px 40px;
+            background: linear-gradient(180deg, #e8e4da 0%, #ddd8cc 100%);
+            margin-top: 64px;
+        }
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--color-text);
+        }
+        .page-hero p {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            color: var(--color-text-light);
+            margin-top: 8px;
+        }
+        .gallery-section {
+            padding: 80px 40px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .gallery-category {
+            margin-bottom: 72px;
+        }
+        .gallery-category-title {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--color-text);
+            margin-bottom: 8px;
+        }
+        .gallery-category-sub {
+            font-size: 12px;
+            color: var(--color-text-light);
+            letter-spacing: 0.15em;
+            margin-bottom: 28px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .gallery-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 4px;
+            background: var(--color-border);
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #ede9e1;
+            color: var(--color-text-light);
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            gap: 8px;
+        }
+        .gallery-placeholder::before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+        }
+        .coming-soon {
+            text-align: center;
+            padding: 80px 40px;
+            background: #f5f2ec;
+        }
+        .coming-soon p {
+            font-size: 14px;
+            color: var(--color-text-light);
+            line-height: 2;
+            margin-bottom: 24px;
+        }
+        .coming-soon a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-light);
+            padding-bottom: 2px;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+        }
+        @media (max-width: 768px) {
+            .gallery-section {
+                padding: 48px 20px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .page-hero {
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">木花日和</a>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="access.html">Access</a></li>
+            <li><a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-hero">
+        <h1>Gallery</h1>
+        <p>季節のお菓子、料理、古民家の空間</p>
+    </div>
+
+    <div class="gallery-section">
+
+        <!-- お菓子・スイーツ -->
+        <div class="gallery-category fade-in">
+            <h2 class="gallery-category-title">Sweets</h2>
+            <p class="gallery-category-sub">季節のお菓子・スイーツ</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 料理・ランチ -->
+        <div class="gallery-category fade-in">
+            <h2 class="gallery-category-title">Food</h2>
+            <p class="gallery-category-sub">ランチ・軽食</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 空間・店内 -->
+        <div class="gallery-category fade-in">
+            <h2 class="gallery-category-title">Space</h2>
+            <p class="gallery-category-sub">古民家の空間・お庭</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">準備中</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coming-soon">
+        <p>
+            写真は随時追加していきます。<br>
+            最新の様子はインスタグラムでもご覧いただけます。
+        </p>
+        <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">
+            @conohanabiyori_eifuku →
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2026 木花日和 コノハナビヨリ — 東京都杉並区永福町</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('open');
+                });
+            });
+        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News — 木花日和</title>
+    <meta name="description" content="木花日和のお知らせ。営業日変更・季節メニュー・イベント情報など。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <!-- OGP設定 -->
+    <meta property="og:title" content="News — 木花日和">
+    <meta property="og:description" content="木花日和のお知らせ。営業日変更・季節メニュー・イベント情報など。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/news.html">
+    <meta property="og:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
+    <meta property="og:site_name" content="木花日和">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 48px 40px;
+            background: linear-gradient(180deg, #e8e4da 0%, #ddd8cc 100%);
+            margin-top: 64px;
+        }
+        .page-hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            color: var(--color-text);
+        }
+        .page-hero p {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            color: var(--color-text-light);
+            margin-top: 8px;
+        }
+        .news-section {
+            padding: 80px 40px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .news-list {
+            list-style: none;
+        }
+        .news-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 36px 0;
+        }
+        .news-item:first-child {
+            border-top: 1px solid var(--color-border);
+        }
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+        .news-date {
+            font-size: 12px;
+            color: var(--color-text-light);
+            letter-spacing: 0.1em;
+        }
+        .news-tag {
+            display: inline-block;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            padding: 3px 10px;
+            border-radius: 2px;
+            border: 1px solid var(--color-accent-light);
+            color: var(--color-accent);
+        }
+        .news-tag.holiday {
+            border-color: #c4a882;
+            color: #8a6a40;
+        }
+        .news-tag.menu {
+            border-color: var(--color-accent-light);
+            color: var(--color-accent);
+        }
+        .news-tag.event {
+            border-color: #a882c4;
+            color: #6a408a;
+        }
+        .news-title {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .news-body {
+            font-size: 14px;
+            color: var(--color-text-light);
+            line-height: 2.2;
+        }
+        .news-body a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-light);
+        }
+        .news-empty {
+            text-align: center;
+            padding: 80px 0;
+            color: var(--color-text-light);
+            font-size: 14px;
+            line-height: 2;
+        }
+        .instagram-note {
+            background: #f5f2ec;
+            border-radius: 4px;
+            padding: 28px 32px;
+            margin-top: 64px;
+            text-align: center;
+        }
+        .instagram-note p {
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 2;
+            margin-bottom: 16px;
+        }
+        .instagram-note a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-light);
+            font-size: 13px;
+            letter-spacing: 0.1em;
+        }
+        @media (max-width: 768px) {
+            .news-section {
+                padding: 48px 20px;
+            }
+            .page-hero {
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">木花日和</a>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="access.html">Access</a></li>
+            <li><a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">Instagram</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-hero">
+        <h1>News</h1>
+        <p>営業案内・メニュー・イベント情報</p>
+    </div>
+
+    <div class="news-section">
+
+        <ul class="news-list">
+
+            <!-- お知らせ例：ここに追加していく -->
+            <li class="news-item fade-in">
+                <div class="news-meta">
+                    <span class="news-date">2026.03.25</span>
+                    <span class="news-tag menu">メニュー</span>
+                </div>
+                <h2 class="news-title">春のメニューが始まりました</h2>
+                <p class="news-body">
+                    桜の季節に合わせた春限定メニューをご用意しております。<br>
+                    空とぶ苺と桜のプリンや、スペルト小麦の苺タルトなど、<br>
+                    ぜひ今の季節だけの味をお楽しみください。<br>
+                    詳しくは<a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">インスタグラム</a>をご覧ください。
+                </p>
+            </li>
+
+            <li class="news-item fade-in">
+                <div class="news-meta">
+                    <span class="news-date">2026.03.01</span>
+                    <span class="news-tag holiday">営業案内</span>
+                </div>
+                <h2 class="news-title">ホームページをリニューアルしました</h2>
+                <p class="news-body">
+                    木花日和の公式ホームページをリニューアルいたしました。<br>
+                    営業時間・メニュー・アクセス情報などをご確認いただけます。<br>
+                    今後ともどうぞよろしくお願いいたします。
+                </p>
+            </li>
+
+        </ul>
+
+        <!-- お知らせがない場合（上のリストを消したときに使う） -->
+        <!--
+        <div class="news-empty">
+            <p>現在お知らせはありません。<br>最新情報はインスタグラムをご確認ください。</p>
+        </div>
+        -->
+
+        <div class="instagram-note">
+            <p>
+                日々の営業情報・メニューの変更は<br>
+                インスタグラムでも随時発信しています。
+            </p>
+            <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">
+                @conohanabiyori_eifuku →
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 木花日和 コノハナビヨリ — 東京都杉並区永福町</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('open');
+                });
+            });
+        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
