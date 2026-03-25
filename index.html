@@ -50,7 +50,7 @@
     </div>
 
     <!-- コンセプトセクション -->
-    <section>
+    <section class="fade-in">
         <p class="section-label">About</p>
         <h2 class="section-title">ここにある、小さな時間</h2>
         <div class="divider"></div>
@@ -68,11 +68,11 @@
 
     <!-- 営業情報セクション -->
     <section style="background: #f5f2ec; max-width: 100%; padding: 96px 40px;">
-        <div style="max-width: 960px; margin: 0 auto;">
+        <div style="max-width: 960px; margin: 0 auto;" class="fade-in">
             <p class="section-label">Hours</p>
             <h2 class="section-title">営業案内</h2>
             <div class="hours-grid">
-                <div class="hours-card">
+                <div class="hours-card fade-in fade-in-delay-1">
                     <h3>木・金・土曜日</h3>
                     <p>Lunch time</p>
                     <p class="time">12:00 — 14:30</p>
@@ -83,7 +83,7 @@
                     <p class="time">15:30 — 18:30</p>
                     <p>各種デザート・ドリンク・軽食</p>
                 </div>
-                <div class="hours-card">
+                <div class="hours-card fade-in fade-in-delay-2">
                     <h3>日曜日（喫茶営業）</h3>
                     <p>終日オープン</p>
                     <p class="time">12:00 — 18:30</p>
@@ -100,7 +100,7 @@
     </section>
 
     <!-- アクセスセクション -->
-    <section>
+    <section class="fade-in">
         <p class="section-label">Access</p>
         <h2 class="section-title">お越しの際は</h2>
         <div class="access-grid">
@@ -141,6 +141,21 @@
     <footer>
         <p>© 2026 木花日和 コノハナビヨリ — 東京都杉並区永福町</p>
     </footer>
+
+    <script>
+        // スクロールアニメーション
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>

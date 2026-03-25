@@ -270,5 +270,20 @@
         <p>© 2026 木花日和 コノハナビヨリ — 東京都杉並区永福町</p>
     </footer>
 
+    <script>
+        // スクロールアニメーション
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
 </body>
 </html>
