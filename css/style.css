@@ -98,9 +98,10 @@ nav {
 }
 
 .hero-logo {
-    width: 200px;
+    width: 160px;
     margin-bottom: 32px;
-    opacity: 0.9;
+    opacity: 0.88;
+    mix-blend-mode: multiply;
 }
 
 .hero-title {
