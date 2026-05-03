@@ -47,6 +47,11 @@
 
     <!-- ヒーローセクション -->
     <div class="hero">
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('images/hero1.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero3.jpg')"></div>
+        </div>
         <div class="hero-content">
             <img src="images/logo.jpg" alt="木花日和" class="hero-logo">
             <h1 class="hero-title">木花日和</h1>
@@ -175,6 +180,17 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+        // スライドショー
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        if (slides.length > 1) {
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        }
     </script>
 
 </body>
