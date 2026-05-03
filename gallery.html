@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery — 木花日和</title>
-    <meta name="description" content="木花日和のギャラリー。季節のお菓子、料理、古民家の空間をご覧ください。">
-    <!-- SEO対策 -->
-    <meta name="keywords" content="木花日和,ギャラリー,写真,古民家,永福町カフェ,スイーツ,料理">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ken0014.github.io/conohanabiyori-web/gallery.html">
+    <title>Pudding — 木花日和</title>
+    <meta name="description" content="木花日和の名物・空とぶプリン。季節ごとに変わるクリームと固めの焼きプリンのマリアージュ。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
     <!-- OGP設定 -->
-    <meta property="og:title" content="Gallery — 木花日和">
-    <meta property="og:description" content="木花日和のギャラリー。季節のお菓子、料理、古民家の空間をご覧ください。">
+    <meta property="og:title" content="Pudding — 木花日和">
+    <meta property="og:description" content="木花日和の名物・空とぶプリン。季節ごとに変わるクリームと固めの焼きプリンのマリアージュ。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/gallery.html">
     <meta property="og:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
@@ -44,98 +40,118 @@
             color: var(--color-text-light);
             margin-top: 8px;
         }
-        .gallery-section {
+        .pudding-section {
             padding: 80px 40px;
-            max-width: 1080px;
+            max-width: 960px;
             margin: 0 auto;
         }
-        .gallery-category {
-            margin-bottom: 72px;
+        .pudding-intro {
+            max-width: 600px;
+            margin-bottom: 64px;
         }
-        .gallery-category-title {
+        .pudding-intro p {
             font-family: var(--font-serif);
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 0.2em;
+            font-size: 16px;
+            line-height: 2.4;
             color: var(--color-text);
-            margin-bottom: 8px;
+            margin-bottom: 16px;
         }
-        .gallery-category-sub {
-            font-size: 12px;
+        .pudding-intro .note {
+            font-size: 13px;
             color: var(--color-text-light);
-            letter-spacing: 0.15em;
-            margin-bottom: 28px;
+            line-height: 2;
+            font-family: var(--font-sans);
         }
-        .gallery-grid {
+        .pudding-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .pudding-item {
+            display: flex;
+            flex-direction: column;
             gap: 12px;
         }
-        .gallery-item {
+        .pudding-photo {
             aspect-ratio: 1;
             overflow: hidden;
             border-radius: 4px;
-            background: var(--color-border);
+            background: #ede9e1;
             position: relative;
         }
-        .gallery-item img {
+        .pudding-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .gallery-item:hover img {
+        .pudding-photo:hover img {
             transform: scale(1.04);
         }
-        .gallery-placeholder {
+        .pudding-placeholder {
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #ede9e1;
+            gap: 12px;
             color: var(--color-text-light);
-            font-size: 12px;
-            letter-spacing: 0.1em;
-            gap: 8px;
         }
-        .gallery-placeholder::before {
+        .pudding-placeholder::before {
             content: '';
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             border: 1px solid var(--color-border);
             border-radius: 50%;
         }
-        .coming-soon {
+        .pudding-placeholder span {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+        }
+        .pudding-caption {
             text-align: center;
-            padding: 80px 40px;
-            background: #f5f2ec;
         }
-        .coming-soon p {
+        .pudding-caption h3 {
+            font-family: var(--font-serif);
             font-size: 14px;
-            color: var(--color-text-light);
-            line-height: 2;
-            margin-bottom: 24px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: var(--color-text);
+            margin-bottom: 4px;
         }
-        .coming-soon a {
+        .pudding-caption p {
+            font-size: 12px;
+            color: var(--color-text-light);
+            letter-spacing: 0.05em;
+        }
+        .pudding-note {
+            background: #f5f2ec;
+            border-radius: 4px;
+            padding: 32px;
+            margin-top: 64px;
+            text-align: center;
+        }
+        .pudding-note p {
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 2.2;
+        }
+        .pudding-note a {
             color: var(--color-accent);
             text-decoration: none;
             border-bottom: 1px solid var(--color-accent-light);
-            padding-bottom: 2px;
-            font-size: 14px;
-            letter-spacing: 0.1em;
         }
         @media (max-width: 768px) {
-            .gallery-section {
+            .pudding-section {
                 padding: 48px 20px;
-            }
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
             }
             .page-hero {
                 padding: 32px 20px;
+            }
+            .pudding-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
         }
     </style>
@@ -152,80 +168,121 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Pudding</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="access.html">Access</a></li>
             <li><a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">Instagram</a></li>
         </ul>
     </nav>
 
     <div class="page-hero">
-        <h1>Gallery</h1>
-        <p>季節のお菓子、料理、古民家の空間</p>
+        <h1>Pudding</h1>
+        <p>空とぶプリン — 季節のクリームと共に</p>
     </div>
 
-    <div class="gallery-section">
+    <div class="pudding-section">
 
-        <!-- お菓子・スイーツ -->
-        <div class="gallery-category fade-in">
-            <h2 class="gallery-category-title">Sweets</h2>
-            <p class="gallery-category-sub">季節のお菓子・スイーツ</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
-                </div>
-            </div>
+        <!-- イントロ -->
+        <div class="pudding-intro fade-in">
+            <p>
+                固めの焼きプリンに<br>
+                季節のクリームをのせた、空とぶプリン。
+            </p>
+            <p class="note">
+                クリームは季節ごとに変わります。数量限定のため、<br>
+                売り切れの場合はご容赦ください。<br>
+                最新情報は<a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank" style="color: var(--color-accent);">インスタグラム</a>をご確認ください。
+            </p>
         </div>
 
-        <!-- 料理・ランチ -->
-        <div class="gallery-category fade-in">
-            <h2 class="gallery-category-title">Food</h2>
-            <p class="gallery-category-sub">ランチ・軽食</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
+        <!-- プリングリッド -->
+        <div class="pudding-grid">
+
+            <div class="pudding-item fade-in">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
+                <div class="pudding-caption">
+                    <h3>春のプリン</h3>
+                    <p>桜・苺のクリーム</p>
                 </div>
             </div>
-        </div>
 
-        <!-- 空間・店内 -->
-        <div class="gallery-category fade-in">
-            <h2 class="gallery-category-title">Space</h2>
-            <p class="gallery-category-sub">古民家の空間・お庭</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
+            <div class="pudding-item fade-in fade-in-delay-1">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">準備中</div>
+                <div class="pudding-caption">
+                    <h3>夏のプリン</h3>
+                    <p>季節のフルーツクリーム</p>
                 </div>
             </div>
+
+            <div class="pudding-item fade-in fade-in-delay-2">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
+                </div>
+                <div class="pudding-caption">
+                    <h3>秋のプリン</h3>
+                    <p>栗・かぼちゃのクリーム</p>
+                </div>
+            </div>
+
+            <div class="pudding-item fade-in">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
+                </div>
+                <div class="pudding-caption">
+                    <h3>冬のプリン</h3>
+                    <p>柑橘・ショコラのクリーム</p>
+                </div>
+            </div>
+
+            <div class="pudding-item fade-in fade-in-delay-1">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
+                </div>
+                <div class="pudding-caption">
+                    <h3>季節のプリン</h3>
+                    <p>旬の素材で</p>
+                </div>
+            </div>
+
+            <div class="pudding-item fade-in fade-in-delay-2">
+                <div class="pudding-photo">
+                    <div class="pudding-placeholder">
+                        <span>準備中</span>
+                    </div>
+                </div>
+                <div class="pudding-caption">
+                    <h3>季節のプリン</h3>
+                    <p>旬の素材で</p>
+                </div>
+            </div>
+
         </div>
 
-    </div>
+        <!-- 注意書き -->
+        <div class="pudding-note fade-in">
+            <p>
+                空とぶプリンは数量限定です。<br>
+                売り切れの場合はご容赦ください。<br>
+                <br>
+                最新の情報・本日のクリームは<br>
+                <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">インスタグラム（@conohanabiyori_eifuku）</a>をご確認ください。
+            </p>
+        </div>
 
-    <div class="coming-soon">
-        <p>
-            写真は随時追加していきます。<br>
-            最新の様子はインスタグラムでもご覧いただけます。
-        </p>
-        <a href="https://www.instagram.com/conohanabiyori_eifuku/" target="_blank">
-            @conohanabiyori_eifuku →
-        </a>
     </div>
 
     <footer>
