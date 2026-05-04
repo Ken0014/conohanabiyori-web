@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu — 木花日和</title>
     <meta name="description" content="木花日和のメニュー。homemadeの料理とお菓子、ナチュラルワイン。">
-    <!-- SEO対策 -->
-    <meta name="keywords" content="木花日和,メニュー,プリン,空とぶプリン,ランチ,スコーン,タルト,チーズケーキ,ナチュラルワイン,永福町,古民家カフェ">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ken0014.github.io/conohanabiyori-web/menu.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
-    <!-- OGP設定 -->
-    <meta property="og:title" content="木花日和 - 永福町の古民家喫茶">
-    <meta property="og:description" content="築90年の古民家一角にある小さな喫茶。大きな桜の木と草花の茂る庭が目印。東京・永福町。homemadecake&food naturalwine">
+    <meta property="og:title" content="Menu — 木花日和">
+    <meta property="og:description" content="homemadeの料理とお菓子、ナチュラルワイン。空とぶプリンや季節のスイーツをご用意しています。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/">
+    <meta property="og:url" content="https://ken0014.github.io/conohanabiyori-web/menu.html">
     <meta property="og:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
     <meta property="og:site_name" content="木花日和">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="木花日和 - 永福町の古民家喫茶">
-    <meta name="twitter:description" content="築90年の古民家一角にある小さな喫茶。大きな桜の木と草花の茂る庭が目印。東京・永福町。">
-    <meta name="twitter:image" content="https://ken0014.github.io/conohanabiyori-web/images/ogp.jpg">
+    <meta name="keywords" content="木花日和,メニュー,プリン,空とぶプリン,ランチ,スコーン,タルト,チーズケーキ,ナチュラルワイン,永福町,古民家カフェ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ken0014.github.io/conohanabiyori-web/menu.html">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .page-hero {
@@ -72,16 +66,51 @@
             font-weight: 400;
             letter-spacing: 0.15em;
             color: var(--color-text);
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .menu-block-sub {
             font-size: 12px;
             color: var(--color-text-light);
             letter-spacing: 0.15em;
-            margin-bottom: 32px;
+            margin-bottom: 8px;
         }
         .menu-items {
             border-top: 1px solid var(--color-border);
+            margin-top: 24px;
+        }
+        /* メニューアイテム：左テキスト・右写真 */
+        .menu-item {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--color-border);
+            align-items: start;
+        }
+        .menu-item-text {}
+        .menu-item-name {
+            font-size: 15px;
+            color: var(--color-text);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .menu-item-desc {
+            font-size: 12px;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+        .menu-item-img {
+            width: 200px;
+            height: 150px;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #ede9e1;
+        }
+        .menu-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .menu-tag {
             display: inline-block;
@@ -112,6 +141,17 @@
             padding-bottom: 2px;
             font-size: 14px;
             letter-spacing: 0.1em;
+        }
+        @media (max-width: 768px) {
+            .menu-section { padding: 48px 20px; }
+            .page-hero { padding: 32px 20px; }
+            .menu-item {
+                grid-template-columns: 1fr;
+            }
+            .menu-item-img {
+                width: 100%;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -147,52 +187,52 @@
             ランチは当日10:30よりお電話にて予約受付しております。
         </div>
 
-        <!-- ランチ -->
+        <!-- Reward Time -->
         <div class="menu-block">
             <h2 class="menu-block-title">Reward Time</h2>
             <p class="menu-block-sub">ご褒美時間をお楽しみください</p>
             <p class="menu-block-sub">12:00 — 14:30（木・金・土）</p>
             <div class="menu-items">
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:20px 0; border-bottom:1px solid #e0d9cc; align-items:start;">
-                    <div>
-                        <p style="font-size:15px; color:#2c2c2c; letter-spacing:0.05em; margin-bottom:8px;">黒パンプレート</p>
-                        <p style="font-size:12px; color:#6b6b6b; line-height:1.6; margin-top:4px;">
+
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">黒パンプレート</p>
+                        <p class="menu-item-desc">
                             サラダ・ミニスープ・ドリンク付き<br>
                             少し酸味のあるパンとそれぞれの具材をのせたパンプレート。<br>
                             全粒粉100%の発酵食品。具材は2種お選びいただけます。<br>
-                            ※季節により具材がかわります
-                        </p>
-                        <p style="font-size:12px; color:#6b6b6b; line-height:1.6; margin-top:8px; font-style:italic;">
-                            生ハムとカマンベールチーズ／オイルサーディンとジャガイモバジル<br>
-                            季節野菜と野菜のディップ／季節の果物とマスカルポーネクリーム
+                            ※季節により具材がかわります<br><br>
+                            <em>生ハムとカマンベールチーズ／オイルサーディンとジャガイモバジル<br>
+                            季節野菜と野菜のディップ／季節の果物とマスカルポーネクリーム</em>
                         </p>
                     </div>
-                    <div style="height:200px; border-radius:4px; overflow:hidden; background:#ede9e1;">
-                    </div>
+                    <div class="menu-item-img"></div>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:20px 0; border-bottom:1px solid #e0d9cc; align-items:start;">
-                    <div>
-                        <p style="font-size:15px; color:#2c2c2c; letter-spacing:0.05em; margin-bottom:8px;">自家製チキンカレー</p>
-                        <p style="font-size:12px; color:#6b6b6b; line-height:1.6; margin-top:4px;">
+
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">自家製チキンカレー</p>
+                        <p class="menu-item-desc">
                             サラダ・ドリンク付き<br>
                             木花日和オリジナルで調合したスパイスを使用。小麦粉不使用。<br>
                             ミニスープを追加できます
                         </p>
                     </div>
-                    <div style="height:200px; border-radius:4px; overflow:hidden;">
-                        <img src="images/curry.jpg" alt="自家製チキンカレー" style="width:100%; height:100%; object-fit:cover;">
+                    <div class="menu-item-img">
+                        <img src="images/curry.jpg" alt="自家製チキンカレー">
                     </div>
                 </div>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:20px 0; border-bottom:1px solid #e0d9cc; align-items:start;">
-                    <div>
-                        <p style="font-size:15px; color:#2c2c2c; letter-spacing:0.05em; margin-bottom:8px;">季節のスープとパン</p>
-                        <p style="font-size:12px; color:#6b6b6b; line-height:1.6; margin-top:4px;">
+
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">季節のスープとパン</p>
+                        <p class="menu-item-desc">
                             サラダ・ドリンク付き
                         </p>
                     </div>
-                    <div style="height:200px; border-radius:4px; overflow:hidden; background:#ede9e1;">
-                    </div>
+                    <div class="menu-item-img"></div>
                 </div>
+
             </div>
             <p style="font-size: 12px; color: var(--color-text-light); margin-top: 20px; line-height: 2;">
                 ※デザートは別途、黒板をご覧ください<br>
@@ -201,140 +241,159 @@
             </p>
         </div>
 
-        <!-- ランチドリンク -->
+        <!-- Sweets & Drinks -->
+        <div class="menu-block">
+            <h2 class="menu-block-title">Sweets & Drinks</h2>
+            <p class="menu-block-sub">15:30 — 18:30（木・金・土）／ 12:00 — 18:30（日）</p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">空とぶプリン <span class="menu-tag">人気</span></p>
+                        <p class="menu-item-desc">固めの焼きプリン。季節のクリームと共に。数量限定</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">季節のタルト</p>
+                        <p class="menu-item-desc">スペルト小麦を使ったタルト。素材は季節により変わります</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">ライ麦スコーン</p>
+                        <p class="menu-item-desc">クリームサンドで。季節のフルーツと共に</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">チーズケーキ</p>
+                        <p class="menu-item-desc">ビーツマーブルなど、季節のアレンジで</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">コーヒー</p>
+                        <p class="menu-item-desc">鎌倉・ディモンシュの豆を使用</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">ハーブティー / 紅茶</p>
+                        <p class="menu-item-desc">季節のブレンド</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-text">
+                        <p class="menu-item-name">ナチュラルワイン <span class="menu-tag">夜営業時</span></p>
+                        <p class="menu-item-desc">グラス・ボトルでご用意。詳細はインスタグラムへ</p>
+                    </div>
+                    <div class="menu-item-img"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lunch Drinks -->
         <div class="menu-block">
             <h2 class="menu-block-title">Lunch Drinks</h2>
             <p class="menu-block-sub">ランチセットのドリンクはこちらからお選びください</p>
             <p class="menu-block-sub">2杯目からは単品メニューの100円引きでご利用いただけます</p>
             <div class="menu-items">
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">コーヒー（ブラジル）</p>
                         <p class="menu-item-desc">鎌倉のディモンシュさん珈琲豆</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">アイスコーヒー</p>
                         <p class="menu-item-desc">鎌倉のディモンシュさん珈琲豆</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">コーヒー（エチオピア深煎り）</p>
                         <p class="menu-item-desc">鎌倉のディモンシュさん珈琲豆</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">カフェオレ</p>
                         <p class="menu-item-desc">デンマークの紅茶（A.Cバークス）</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">アイスティー</p>
                         <p class="menu-item-desc">オーガニック アールグレイ</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">ハーブティー</p>
                         <p class="menu-item-desc">長野 藪原 森の中にある薬草店 ハーバルノートより</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">王妃ブレンド</p>
                         <p class="menu-item-desc">セイロン紅茶とアッサムブレンド</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">王様ブレンド</p>
                         <p class="menu-item-desc">ジャスミンの花びらと緑茶ブレンド</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">ぶどうジュース</p>
                         <p class="menu-item-desc">長野 村一農園ぶどう100%</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">りんごジュース</p>
                         <p class="menu-item-desc">長野 村一農園りんご100%</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">にんじんジュース</p>
                         <p class="menu-item-desc">新潟津南高原雪下にんじん100%</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">ビール <span class="menu-tag">+300円</span></p>
                         <p class="menu-item-desc">ピルスナー</p>
                     </div>
+                    <div class="menu-item-img"></div>
                 </div>
                 <div class="menu-item">
-                    <div>
+                    <div class="menu-item-text">
                         <p class="menu-item-name">ナチュラルワイン <span class="menu-tag">+400円〜</span></p>
                         <p class="menu-item-desc">WHITE・RED 各種</p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ティータイム・お菓子 -->
-        <div class="menu-block">
-            <h2 class="menu-block-title">Sweets & Drinks</h2>
-            <p class="menu-block-sub">15:30 — 18:30（木・金・土）／ 12:00 — 18:30（日）</p>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">空とぶプリン <span class="menu-tag">人気</span></p>
-                        <p class="menu-item-desc">固めの焼きプリン。季節のクリームと共に。数量限定</p>
-                        <a href="gallery.html" class="menu-item-link">Pudding のページを見る →</a>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">季節のタルト</p>
-                        <p class="menu-item-desc">スペルト小麦を使ったタルト。素材は季節により変わります</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">ライ麦スコーン</p>
-                        <p class="menu-item-desc">クリームサンドで。季節のフルーツと共に</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">チーズケーキ</p>
-                        <p class="menu-item-desc">ビーツマーブルなど、季節のアレンジで</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">コーヒー</p>
-                        <p class="menu-item-desc">鎌倉・ディモンシュの豆を使用</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">ハーブティー / 紅茶</p>
-                        <p class="menu-item-desc">季節のブレンド</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div>
-                        <p class="menu-item-name">ナチュラルワイン <span class="menu-tag">夜営業時</span></p>
-                        <p class="menu-item-desc">グラス・ボトルでご用意。詳細はインスタグラムへ</p>
-                    </div>
+                    <div class="menu-item-img"></div>
                 </div>
             </div>
         </div>
@@ -370,7 +429,6 @@
                 });
             });
         }
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -378,7 +436,6 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
