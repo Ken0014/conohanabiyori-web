@@ -436,12 +436,17 @@ footer {
     align-items: flex-start;
 }
 
+.menu-item > div:not(.menu-item-photo) {
+    flex: 1;
+}
+
 .menu-item-photo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     flex-shrink: 0;
     border-radius: 4px;
     overflow: hidden;
+    background: #f0ede6;
 }
 
 .menu-item-photo img {
