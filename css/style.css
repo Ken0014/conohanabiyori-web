@@ -429,14 +429,18 @@ footer {
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
 
-/* メニュー写真 */
+/* メニューアイテム */
 .menu-item {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    gap: 24px;
 }
 
-.menu-item > div:not(.menu-item-photo) {
+.menu-item-info {
     flex: 1;
 }
 
@@ -446,13 +450,24 @@ footer {
     flex-shrink: 0;
     border-radius: 4px;
     overflow: hidden;
-    background: #f0ede6;
+    order: 2;
 }
 
 .menu-item-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+    }
+    .menu-item-photo {
+        width: 100%;
+        height: 200px;
+        order: -1;
+    }
 }
 
 .menu-item-link {
