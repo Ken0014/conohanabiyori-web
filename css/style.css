@@ -97,6 +97,7 @@ nav {
 
 .hero-slide.active {
     opacity: 0.75;
+    z-index: 1;
 }
 
 .hero-slide:not(.active) + .hero-slide:not(.active):not(:first-child),
